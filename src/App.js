@@ -37,17 +37,17 @@ export default class App extends Component {
 
   populateBankData(){
     var bankData = [];
-    var searchString = this.state.searchString;
+    var searchString = this.state.searchString, i;
     if(searchString){
       searchString = searchString.toLowerCase().trim();
-      for(var i=0;i < this.state.bankData.length;i++){
+      for(i=0;i < this.state.bankData.length;i++){
         if(this.state.bankData[i].branch.toLowerCase().indexOf(searchString) > -1 || this.state.bankData[i].bank_name.toLowerCase().indexOf(searchString) > -1 || this.state.bankData[i].ifsc.toLowerCase().indexOf(searchString) > -1){
           bankData.push(<TableRow data={this.state.bankData[i]} key={this.state.bankData[i].ifsc} />);
         }
       }
     }
     else{
-      for(var i=0;i < this.state.bankData.length;i++){
+      for(i=0;i < this.state.bankData.length;i++){
         bankData.push(<TableRow data={this.state.bankData[i]} key={this.state.bankData[i].ifsc} />);
       }
     }
