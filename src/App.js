@@ -77,7 +77,10 @@ export default class App extends Component {
               <option value="CHENNAI">Chennai</option>
               <option value="KOLKATA">Kolkata</option>
             </select>
-            <input type="search" id="search-bar" name="search-bar" placeholder="Search" value={this.state.searchString} onInput={this.updateSearchString} />
+            <div id="search-container">
+              <input type="search" id="search-bar" name="search-bar" placeholder="Search" value={this.state.searchString} onInput={this.updateSearchString} />
+              <img src="./search.svg" height="16px" width="16px" id="search-icon" />
+            </div>
           </div>
           <div id="table-container">
             <TableHeader />

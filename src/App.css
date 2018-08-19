@@ -13,14 +13,25 @@ section{
 }
 #city-selector, #search-bar{
   outline-style: none;
-  padding: 7px 10px;
 }
 #city-selector{
   background: transparent;
+  padding: 7px 10px;
   width: 200px;
+}
+#search-container{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 #search-bar{
   width: 300px;
+  padding: 7px 10px 7px 30px;
+}
+#search-icon{
+  position: absolute;
+  left: 10px;
 }
 #table-container{
   margin: 50px 0;
